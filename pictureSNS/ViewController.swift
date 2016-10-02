@@ -9,9 +9,7 @@ import UIKit
 
 class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
-    let applicationkey = "aef7a2bb68635809a293ce361c095d6ac00c76d271594189faf1d97c29ba6cc1"
     
-    let clientkey       = "f9ce51112700f2a7fb1556f42a823b503584519273041006486978e829d63db1"
     
     
     @IBOutlet weak var imageView: UIImageView!
@@ -22,27 +20,20 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
-        
-        
-        NCMB.setApplicationKey(applicationkey, clientKey: clientkey)
-        
-        
-        
-        //                 データの送信
-        //                let obj = NCMBObject(className: "lifeistech")
-        //                obj.setObject("hello", forKey: "message")
-        //
-        //                var saveError: NSError?
-        //                obj.save(&saveError)
-        //
-        //                if saveError == nil {
-        //                    print("[SAVE] Dome")
-        //                } else {
-        //                    print("[SAVE-ERROR] /(saveError)")
-        //
-        //
-        //                }
+//                         データの送信
+//                        let obj = NCMBObject(className: "lifeistech")
+//                        obj.setObject("hello", forKey: "message")
+//        
+//                        var saveError: NSError?
+//                        obj.save(&saveError)
+//        
+//                        if saveError == nil {
+//                            print("[SAVE] Dome")
+//                        } else {
+//                            print("[SAVE-ERROR] /(saveError)")
+//        
+//        
+//                        }
         
         //         データの取得
         //        let query = NCMBQuery(className: "lifeistech")
@@ -80,41 +71,41 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
         
         
         
-        //       画像の送信
-        //        let imageData : NSData = NSData(data: UIImagePNGRepresentation(UIImage(named: "original.png")!)!)
-        //        let fileName = "lifeistech.png"
-        //        let file:NCMBFile = NCMBFile.fileWithName(fileName ,data: imageData) as!
-        //            NCMBFile
-        //        let acl = NCMBACL()
-        //        //
-        //        acl.setPublicReadAccess(true)
-        //        acl.setPublicWriteAccess(true)
-        //        file.ACL = acl
-        //
-        //        var error1 : NSError?
-        //        file.save(&error1)
-        //        if error1 != nil {
-        //            print("Image data save error : ",error1)
-        //        }
-        
-        
-        //        画像の取得
-        //        var image:UIImage? = nil
-        //        var imageData:NSData!
-        //
-        //        let file:NCMBFile = NCMBFile.fileWithName("lifeistech.png" ,data: nil ) as!
-        //            NCMBFile
-        //
-        //        do {
-        //            imageData = try file.getData()
-        //
-        //        } catch let error1 as NSError {
-        //           print("Image data read error : ",error1)
-        //        }
-        //        imageView.image = UIImage(data: imageData)
-        //
-        //    }
-        
+//               画像の送信
+//                let imageData : NSData = NSData(data: UIImagePNGRepresentation(UIImage(named: "original.png")!)!)
+//                let fileName = "lifeistech.png"
+//                let file:NCMBFile = NCMBFile.fileWithName(fileName ,data: imageData) as!
+//                    NCMBFile
+//                let acl = NCMBACL()
+//                //
+//                acl.setPublicReadAccess(true)
+//                acl.setPublicWriteAccess(true)
+//                file.ACL = acl
+//        
+//                var error1 : NSError?
+//                file.save(&error1)
+//                if error1 != nil {
+//                    print("Image data save error : ",error1)
+//                }
+//
+//        
+//                画像の取得
+//                var image:UIImage? = nil
+//                var imageData:NSData!
+//        
+//                let file:NCMBFile = NCMBFile.fileWithName("lifeistech.png" ,data: nil ) as!
+//                    NCMBFile
+//        
+//                do {
+//                    imageData = try file.getData()
+//        
+//                } catch let error1 as NSError {
+//                   print("Image data read error : ",error1)
+//                }
+//                imageView.image = UIImage(data: imageData)
+//        
+//            }
+    
         
         
         //        let query = NCMBFile.query()
@@ -224,7 +215,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
             
             //            データの送信
             let obj = NCMBObject(className: "lifeistech")
-            obj.setObject("リッキー", forKey: "UserName")
+            obj.setObject(NCMBUser.currentUser(), forKey: "UserName")
             obj.setObject(fileName,forKey: "FileName")
             var saveError: NSError?
             obj.save(&saveError)
@@ -292,6 +283,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
                     }
                     
                 }
+
                 
                 
             }

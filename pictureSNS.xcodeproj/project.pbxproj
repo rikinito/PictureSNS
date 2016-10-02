@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		483313EA1D28A04500CBEECA /* original.png in Resources */ = {isa = PBXBuildFile; fileRef = 483313E91D28A04500CBEECA /* original.png */; };
+		487879AE1DA0CA6D007EFBF6 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487879AD1DA0CA6D007EFBF6 /* TimeLineViewController.swift */; };
 		487CC24A1D163562005EED73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487CC2491D163562005EED73 /* AppDelegate.swift */; };
 		487CC24F1D163562005EED73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 487CC24D1D163562005EED73 /* Main.storyboard */; };
 		487CC2511D163562005EED73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 487CC2501D163562005EED73 /* Assets.xcassets */; };
@@ -65,6 +66,9 @@
 		487CC31F1D1635A4005EED73 /* SubClassHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 487CC2EE1D1635A4005EED73 /* SubClassHandler.m */; };
 		487CC3211D166FB6005EED73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487CC24B1D163562005EED73 /* ViewController.swift */; };
 		487CC3251D168741005EED73 /* ai.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 487CC3241D168741005EED73 /* ai.jpeg */; };
+		48942B8F1D8E365500D71B0F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48942B8E1D8E365500D71B0F /* SignUpViewController.swift */; };
+		48CE1E341D8E5DF500B236FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE1E331D8E5DF500B236FA /* LoginViewController.swift */; };
+		48CE1E361D8E647100B236FA /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE1E351D8E647100B236FA /* LogoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,7 @@
 
 /* Begin PBXFileReference section */
 		483313E91D28A04500CBEECA /* original.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = original.png; sourceTree = "<group>"; };
+		487879AD1DA0CA6D007EFBF6 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		487CC2461D163562005EED73 /* pictureSNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pictureSNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		487CC2491D163562005EED73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		487CC24B1D163562005EED73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +212,9 @@
 		487CC2EE1D1635A4005EED73 /* SubClassHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubClassHandler.m; sourceTree = "<group>"; };
 		487CC3201D1635F0005EED73 /* pictureSNS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pictureSNS-Bridging-Header.h"; sourceTree = "<group>"; };
 		487CC3241D168741005EED73 /* ai.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ai.jpeg; sourceTree = "<group>"; };
+		48942B8E1D8E365500D71B0F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		48CE1E331D8E5DF500B236FA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = NCMB/LoginViewController.swift; sourceTree = "<group>"; };
+		48CE1E351D8E647100B236FA /* LogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogoutViewController.swift; path = NCMB/LogoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +275,10 @@
 				487CC2521D163562005EED73 /* LaunchScreen.storyboard */,
 				487CC2551D163562005EED73 /* Info.plist */,
 				487CC3201D1635F0005EED73 /* pictureSNS-Bridging-Header.h */,
+				48942B8E1D8E365500D71B0F /* SignUpViewController.swift */,
+				48CE1E331D8E5DF500B236FA /* LoginViewController.swift */,
+				48CE1E351D8E647100B236FA /* LogoutViewController.swift */,
+				487879AD1DA0CA6D007EFBF6 /* TimeLineViewController.swift */,
 			);
 			path = pictureSNS;
 			sourceTree = "<group>";
@@ -653,6 +665,7 @@
 				487CC30C1D1635A4005EED73 /* NCMBOAConsumer.m in Sources */,
 				487CC3171D1635A4005EED73 /* NSDataBase64Encode.m in Sources */,
 				487CC3181D1635A4005EED73 /* NCMBAddOperation.m in Sources */,
+				48CE1E361D8E647100B236FA /* LogoutViewController.swift in Sources */,
 				487CC3161D1635A4005EED73 /* NCMBUser.m in Sources */,
 				487CC2FE1D1635A4005EED73 /* NCMBReachability.m in Sources */,
 				487CC2FC1D1635A4005EED73 /* NCMBPush.m in Sources */,
@@ -667,6 +680,7 @@
 				487CC3021D1635A4005EED73 /* NCMBRole.m in Sources */,
 				487CC3051D1635A4005EED73 /* NCMB_Twitter.m in Sources */,
 				487CC3141D1635A4005EED73 /* NCMBTwitterUtils.m in Sources */,
+				48CE1E341D8E5DF500B236FA /* LoginViewController.swift in Sources */,
 				487CC31F1D1635A4005EED73 /* SubClassHandler.m in Sources */,
 				487CC3001D1635A4005EED73 /* NCMBCloseImageView.m in Sources */,
 				487CC2F81D1635A4005EED73 /* NCMBGeoPoint.m in Sources */,
@@ -676,12 +690,14 @@
 				487CC2FF1D1635A4005EED73 /* NCMBRelation.m in Sources */,
 				487CC2EF1D1635A4005EED73 /* NCMBRequest.m in Sources */,
 				487CC3031D1635A4005EED73 /* NCMBScript.m in Sources */,
+				487879AE1DA0CA6D007EFBF6 /* TimeLineViewController.swift in Sources */,
 				487CC31C1D1635A4005EED73 /* NCMBRelationOperation.m in Sources */,
 				487CC2F71D1635A4005EED73 /* NCMBFile.m in Sources */,
 				487CC3061D1635A4005EED73 /* NSMutableURLRequestParameters.m in Sources */,
 				487CC3131D1635A4005EED73 /* NCMBTwitterLoginView.m in Sources */,
 				487CC3111D1635A4005EED73 /* NCMBOAServiceTicket.m in Sources */,
 				487CC3091D1635A4005EED73 /* Base64Transcoder.c in Sources */,
+				48942B8F1D8E365500D71B0F /* SignUpViewController.swift in Sources */,
 				487CC30D1D1635A4005EED73 /* NCMBOADataFetcher.m in Sources */,
 				487CC31E1D1635A4005EED73 /* NCMBSetOperation.m in Sources */,
 				487CC2F31D1635A4005EED73 /* NCMBAnalytics.m in Sources */,

@@ -12,10 +12,15 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    let applicationkey = "7d1214db44e0e0336f395d08508fa624eda63035372f11aabe6a89d6820e6d56"
+    
+    let clientkey       = "91e4707e346487255b4636e6f65b031f607c55b077fb31dcfaffa6a6be4036cc"
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        NCMB.setApplicationKey(applicationkey, clientKey: clientkey)
         return true
     }
 
