@@ -8,11 +8,18 @@
 
 import UIKit
 
-class TimeLineViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
-    @IBOutlet weak var imagiView: UIImageView!
+class TimeLineViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    
+    @IBOutlet weak var table: UITableView!
+    
+    var images : [UIImage] = [UIImage]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.table.delegate = self
+        
+        
         let query = NCMBQuery(className: "lifeistech")
         query.whereKey("UserName", equalTo: NCMBUser.currentUser())
         query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) in
@@ -34,9 +41,6 @@ class TimeLineViewController: UIViewController,UIImagePickerControllerDelegate,U
                         let fileName = obj.objectForKey("FileName")
                         
                         
-                        //        画像の取得
-                        var image:UIImage? = nil
-                        
                         
                         let file:NCMBFile = NCMBFile.fileWithName(fileName as!
                             String,data: nil ) as!
@@ -50,22 +54,42 @@ class TimeLineViewController: UIViewController,UIImagePickerControllerDelegate,U
                             print("Image data read error : ",error1)
                         }
                         
-                        var imageData = UIImage(data: data)
-                        self.imagiView.image = imageData
                         
-                        print(imageData!.size)
+                        
+                        
+                     self.images.append(UIImage(data: data)!)
+                      
                     }
                     
                 }
                 
+                self.table.reloadData()
+                
                 
                 
             }
+            
+            
+
         }
         
         
         
 
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return images.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath)
+        -> UITableViewCell {
+            
+            let cell: CustomTableViewCell = tableView.dequeueReusableCellWithIdentifier("CustomCell", forIndexPath: indexPath) as! CustomTableViewCell
+            
+            cell.name.text = "ああああああ"
+            return cell
+        
     }
     
     @IBAction func sendImage(sender: AnyObject) {
@@ -98,7 +122,6 @@ class TimeLineViewController: UIViewController,UIImagePickerControllerDelegate,U
             //そしてそれを宣言済みのimageViewへ放り込む
             
             let image: UIImage = (didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage]as? UIImage)!
-            imagiView.image = image
             
             let size = CGSize(width: 150, height: 150)
             UIGraphicsBeginImageContext(size)
@@ -155,6 +178,34 @@ class TimeLineViewController: UIViewController,UIImagePickerControllerDelegate,U
         
         //写真選択後にカメラロール表示ViewControllerを引っ込める動作
         picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    
+    
+    
+    
+    
+    
+    @IBDesignable class CustomButton: UIButton {
+        
+        // 角丸の半径(0で四角形)
+        @IBInspectable var cornerRadius: CGFloat = 0.0
+        
+        // 枠
+        @IBInspectable var borderColor: UIColor = UIColor.clearColor()
+        @IBInspectable var borderWidth: CGFloat = 0.0
+        
+        override func drawRect(rect: CGRect) {
+            // 角丸
+            self.layer.cornerRadius = cornerRadius
+            self.clipsToBounds = (cornerRadius > 0)
+            
+            // 枠線
+            self.layer.borderColor = borderColor.CGColor
+            self.layer.borderWidth = borderWidth
+            
+            super.drawRect(rect)
+        }
     }
 
 }
