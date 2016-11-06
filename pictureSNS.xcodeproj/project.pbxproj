@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		483313EA1D28A04500CBEECA /* original.png in Resources */ = {isa = PBXBuildFile; fileRef = 483313E91D28A04500CBEECA /* original.png */; };
-		487879AE1DA0CA6D007EFBF6 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487879AD1DA0CA6D007EFBF6 /* TimeLineViewController.swift */; };
 		487879B21DA0F8DA007EFBF6 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487879B11DA0F8DA007EFBF6 /* CustomTableViewCell.swift */; };
-		487879B41DA0FBCA007EFBF6 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 487879B31DA0FBCA007EFBF6 /* View.xib */; };
 		487CC24A1D163562005EED73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487CC2491D163562005EED73 /* AppDelegate.swift */; };
 		487CC24F1D163562005EED73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 487CC24D1D163562005EED73 /* Main.storyboard */; };
 		487CC2511D163562005EED73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 487CC2501D163562005EED73 /* Assets.xcassets */; };
@@ -71,6 +69,9 @@
 		48942B8F1D8E365500D71B0F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48942B8E1D8E365500D71B0F /* SignUpViewController.swift */; };
 		48CE1E341D8E5DF500B236FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE1E331D8E5DF500B236FA /* LoginViewController.swift */; };
 		48CE1E361D8E647100B236FA /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE1E351D8E647100B236FA /* LogoutViewController.swift */; };
+		48F197F41DCF03FD001C07BE /* TimeLineShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F197F31DCF03FD001C07BE /* TimeLineShowViewController.swift */; };
+		48F197F71DCF0D7B001C07BE /* TableViewShowPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F197F61DCF0D7B001C07BE /* TableViewShowPictureCell.swift */; };
+		48F197F91DCF0DE0001C07BE /* TableViewShowPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48F197F81DCF0DE0001C07BE /* TableViewShowPictureCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,9 +93,7 @@
 
 /* Begin PBXFileReference section */
 		483313E91D28A04500CBEECA /* original.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = original.png; sourceTree = "<group>"; };
-		487879AD1DA0CA6D007EFBF6 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		487879B11DA0F8DA007EFBF6 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		487879B31DA0FBCA007EFBF6 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		487CC2461D163562005EED73 /* pictureSNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pictureSNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		487CC2491D163562005EED73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		487CC24B1D163562005EED73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +218,9 @@
 		48942B8E1D8E365500D71B0F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		48CE1E331D8E5DF500B236FA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = NCMB/LoginViewController.swift; sourceTree = "<group>"; };
 		48CE1E351D8E647100B236FA /* LogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogoutViewController.swift; path = NCMB/LogoutViewController.swift; sourceTree = "<group>"; };
+		48F197F31DCF03FD001C07BE /* TimeLineShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineShowViewController.swift; sourceTree = "<group>"; };
+		48F197F61DCF0D7B001C07BE /* TableViewShowPictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewShowPictureCell.swift; sourceTree = "<group>"; };
+		48F197F81DCF0DE0001C07BE /* TableViewShowPictureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewShowPictureCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +271,7 @@
 		487CC2481D163562005EED73 /* pictureSNS */ = {
 			isa = PBXGroup;
 			children = (
+				48F197F51DCF0CE2001C07BE /* TableViewCell */,
 				487CC3241D168741005EED73 /* ai.jpeg */,
 				483313E91D28A04500CBEECA /* original.png */,
 				487CC2771D1635A4005EED73 /* NCMB */,
@@ -282,9 +285,8 @@
 				48942B8E1D8E365500D71B0F /* SignUpViewController.swift */,
 				48CE1E331D8E5DF500B236FA /* LoginViewController.swift */,
 				48CE1E351D8E647100B236FA /* LogoutViewController.swift */,
-				487879AD1DA0CA6D007EFBF6 /* TimeLineViewController.swift */,
 				487879B11DA0F8DA007EFBF6 /* CustomTableViewCell.swift */,
-				487879B31DA0FBCA007EFBF6 /* View.xib */,
+				48F197F31DCF03FD001C07BE /* TimeLineShowViewController.swift */,
 			);
 			path = pictureSNS;
 			sourceTree = "<group>";
@@ -524,6 +526,15 @@
 			path = SubClassHandler;
 			sourceTree = "<group>";
 		};
+		48F197F51DCF0CE2001C07BE /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				48F197F61DCF0D7B001C07BE /* TableViewShowPictureCell.swift */,
+				48F197F81DCF0DE0001C07BE /* TableViewShowPictureCell.xib */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -593,15 +604,18 @@
 					487CC2451D163562005EED73 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = M4BU57H422;
+						LastSwiftMigration = 0810;
 					};
 					487CC2591D163562005EED73 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = M4BU57H422;
+						LastSwiftMigration = 0810;
 						TestTargetID = 487CC2451D163562005EED73;
 					};
 					487CC2641D163562005EED73 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = M4BU57H422;
+						LastSwiftMigration = 0810;
 						TestTargetID = 487CC2451D163562005EED73;
 					};
 				};
@@ -631,11 +645,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				487879B41DA0FBCA007EFBF6 /* View.xib in Resources */,
 				487CC2F11D1635A4005EED73 /* NCMB_Info.plist in Resources */,
 				487CC2541D163562005EED73 /* LaunchScreen.storyboard in Resources */,
 				487CC2511D163562005EED73 /* Assets.xcassets in Resources */,
 				487CC3251D168741005EED73 /* ai.jpeg in Resources */,
+				48F197F91DCF0DE0001C07BE /* TableViewShowPictureCell.xib in Resources */,
 				483313EA1D28A04500CBEECA /* original.png in Resources */,
 				487CC24F1D163562005EED73 /* Main.storyboard in Resources */,
 			);
@@ -697,7 +711,6 @@
 				487CC2FF1D1635A4005EED73 /* NCMBRelation.m in Sources */,
 				487CC2EF1D1635A4005EED73 /* NCMBRequest.m in Sources */,
 				487CC3031D1635A4005EED73 /* NCMBScript.m in Sources */,
-				487879AE1DA0CA6D007EFBF6 /* TimeLineViewController.swift in Sources */,
 				487CC31C1D1635A4005EED73 /* NCMBRelationOperation.m in Sources */,
 				487CC2F71D1635A4005EED73 /* NCMBFile.m in Sources */,
 				487CC3061D1635A4005EED73 /* NSMutableURLRequestParameters.m in Sources */,
@@ -712,8 +725,10 @@
 				487CC2FA1D1635A4005EED73 /* NCMBInstallation.m in Sources */,
 				487CC3151D1635A4005EED73 /* NCMBURLConnection.m in Sources */,
 				487CC30F1D1635A4005EED73 /* NCMBOAMutableURLRequest.m in Sources */,
+				48F197F71DCF0D7B001C07BE /* TableViewShowPictureCell.swift in Sources */,
 				487CC2FD1D1635A4005EED73 /* NCMBQuery.m in Sources */,
 				487CC2F91D1635A4005EED73 /* NCMBGoogleUtils.m in Sources */,
+				48F197F41DCF03FD001C07BE /* TimeLineShowViewController.swift in Sources */,
 				487CC2FB1D1635A4005EED73 /* NCMBObject.m in Sources */,
 				487CC30E1D1635A4005EED73 /* NCMBOAHMAC_SHA1SignatureProvider.m in Sources */,
 				487CC2F21D1635A4005EED73 /* NCMBACL.m in Sources */,
@@ -863,6 +878,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.litech.pictureSNS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "pictureSNS/pictureSNS-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -875,6 +891,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.litech.pictureSNS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "pictureSNS/pictureSNS-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -886,6 +903,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.litech.pictureSNSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pictureSNS.app/pictureSNS";
 			};
 			name = Debug;
@@ -898,6 +916,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.litech.pictureSNSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pictureSNS.app/pictureSNS";
 			};
 			name = Release;
@@ -909,6 +928,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.litech.pictureSNSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = pictureSNS;
 			};
 			name = Debug;
@@ -920,6 +940,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.litech.pictureSNSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = pictureSNS;
 			};
 			name = Release;

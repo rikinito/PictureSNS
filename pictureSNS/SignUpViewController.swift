@@ -28,11 +28,14 @@ class SignUpViewController: UIViewController,UITextFieldDelegate{
         passwordTextField.delegate = self
         nameTextField.delegate = self
         confirmPasswordTextField.delegate = self
-        passwordTextField.secureTextEntry = true
-        confirmPasswordTextField.secureTextEntry = true
+        
+        
+        passwordTextField.isSecureTextEntry = true
+        confirmPasswordTextField.isSecureTextEntry = true
     }
     
-    override func viewWillAppear(animated: Bool) {
+    
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
     }
@@ -43,10 +46,16 @@ class SignUpViewController: UIViewController,UITextFieldDelegate{
     }
     
     @IBAction func didSelectSignup() {
+        
+        print("ログイン")
         guard let email = emailTextField.text else { return }
         guard let pass = passwordTextField.text else { return }
         guard let name = nameTextField.text else { return }
         guard let confirm = confirmPasswordTextField.text else { return }
+        print(email)
+        print(pass)
+        print(confirm)
+        print(name)
         if confirm.isEqual(pass) {
             self.signup(email, password: pass, username: name)
         }else {
@@ -58,12 +67,12 @@ class SignUpViewController: UIViewController,UITextFieldDelegate{
         self.transition()
     }
     
-    func signup(mail: String, password: String, username: String) {
+    func signup(_ mail: String, password: String, username: String) {
         let user = NCMBUser(className: "user")
-        user.password = password
-        user.mailAddress = mail
-        user.userName = username
-        if user.isNew == false {
+        user?.password = password
+        user?.mailAddress = mail
+        user?.userName = username
+        if user?.isNew == false {
 //            user.signUpInBackgroundWithBlock { (error) in
 //                if error != nil {
 //                    print(error.localizedDescription)
@@ -74,8 +83,9 @@ class SignUpViewController: UIViewController,UITextFieldDelegate{
 //               }
 //            }
             
-            self.requestAuthentication(email: mail)
+             self.requestAuthentication(email: mail)
             
+        
         }else {
             print("ユーザーネームかぶっているよ")
             self.presentCheckUsernameAlert()
@@ -83,52 +93,74 @@ class SignUpViewController: UIViewController,UITextFieldDelegate{
     }
     
     func requestAuthentication(email address: String) {
-        NCMBUser.requestAuthenticationMailInBackground(address, block: { (error) in
+        NCMBUser.requestAuthenticationMail(inBackground: address, block: { (error) in
             if error != nil {
-                print(error.localizedDescription)
+                //print(error?.localizedDescription)
             }else {
+                
+                let alert = UIAlertController(title: "メール認証", message: "メール認証をしてください", preferredStyle: .alert)
+                let btn = UIAlertAction(title: "OK", style: .default) { (action) in self.dismiss(animated: true, completion: nil)                                   }
+                alert.addAction(btn)
+                self.present(alert, animated: true, completion: nil)
+
+
+
                 //self.transition()
             }
         })
     }
     
     func presentPassConfirmAlert() {
-        let alert = UIAlertController(title: "パスワードが一致しません", message: "パスワードが一致しなかったので、もう一度入力してください", preferredStyle: .Alert)
-        let btn = UIAlertAction(title: "OK", style: .Default) { (action) in
+        let alert = UIAlertController(title: "パスワードが一致しません", message: "パスワードが一致しなかったので、もう一度入力してください", preferredStyle: .alert)
+        let btn = UIAlertAction(title: "OK", style: .default) { (action) in
             self.confirmPasswordTextField.text = ""
             self.passwordTextField.text = ""
         }
         alert.addAction(btn)
-        self.presentViewController(alert, animated: true, completion: nil)
+        
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func presentCheckUsernameAlert()  {
-        let alert = UIAlertController(title: "ユーザーネームエラー", message: "記入されたユーザーネームは既に登録されています。\n違うユーザーネームを記入してください", preferredStyle: .Alert)
-        let btn = UIAlertAction(title: "OK", style: .Default) { (action) in
+        let alert = UIAlertController(title: "ユーザーネームエラー", message: "記入されたユーザーネームは既に登録されています。\n違うユーザーネームを記入してください", preferredStyle: .alert)
+        let btn = UIAlertAction(title: "OK", style: .default) { (action) in
 //            self.nameTextField.text = ""
         }
         alert.addAction(btn)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func toView()  {
-        self.performSegueWithIdentifier("toView", sender: nil)
+        self.performSegue(withIdentifier: "toView", sender: nil)
     }
     
     func transition() {
-        self.performSegueWithIdentifier("toLoginView", sender: nil)
+        self.performSegue(withIdentifier: "toLoginView", sender: nil)
     }
     
     
-}
+ 
+   
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("タッチ")
+        if (self.emailTextField.isFirstResponder) {
+            self.emailTextField.resignFirstResponder()
+            
+        }else if(self.passwordTextField.isFirstResponder) {
+            self.passwordTextField.resignFirstResponder()
+            
+        }else if(self.confirmPasswordTextField.isFirstResponder) {
+            self.confirmPasswordTextField.resignFirstResponder()
+            
+        }else if(self.nameTextField.isFirstResponder) {
+            self.nameTextField.resignFirstResponder()
+            
+        }
 
-@objc class CustomTextFieldDelegate: UIView, UITextFieldDelegate {
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        print(textField)
-        textField.resignFirstResponder()
-        return true
     }
+    
 }
 
 /*
