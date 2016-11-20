@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		483313EA1D28A04500CBEECA /* original.png in Resources */ = {isa = PBXBuildFile; fileRef = 483313E91D28A04500CBEECA /* original.png */; };
-		487879B21DA0F8DA007EFBF6 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487879B11DA0F8DA007EFBF6 /* CustomTableViewCell.swift */; };
 		487CC24A1D163562005EED73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487CC2491D163562005EED73 /* AppDelegate.swift */; };
 		487CC24F1D163562005EED73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 487CC24D1D163562005EED73 /* Main.storyboard */; };
 		487CC2511D163562005EED73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 487CC2501D163562005EED73 /* Assets.xcassets */; };
@@ -67,6 +66,7 @@
 		487CC3211D166FB6005EED73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487CC24B1D163562005EED73 /* ViewController.swift */; };
 		487CC3251D168741005EED73 /* ai.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 487CC3241D168741005EED73 /* ai.jpeg */; };
 		48942B8F1D8E365500D71B0F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48942B8E1D8E365500D71B0F /* SignUpViewController.swift */; };
+		48B6DC0C1DE17F7100D435BA /* SendDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B6DC0B1DE17F7100D435BA /* SendDataViewController.swift */; };
 		48CE1E341D8E5DF500B236FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE1E331D8E5DF500B236FA /* LoginViewController.swift */; };
 		48CE1E361D8E647100B236FA /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE1E351D8E647100B236FA /* LogoutViewController.swift */; };
 		48F197F41DCF03FD001C07BE /* TimeLineShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F197F31DCF03FD001C07BE /* TimeLineShowViewController.swift */; };
@@ -93,7 +93,6 @@
 
 /* Begin PBXFileReference section */
 		483313E91D28A04500CBEECA /* original.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = original.png; sourceTree = "<group>"; };
-		487879B11DA0F8DA007EFBF6 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		487CC2461D163562005EED73 /* pictureSNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pictureSNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		487CC2491D163562005EED73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		487CC24B1D163562005EED73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +215,7 @@
 		487CC3201D1635F0005EED73 /* pictureSNS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pictureSNS-Bridging-Header.h"; sourceTree = "<group>"; };
 		487CC3241D168741005EED73 /* ai.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ai.jpeg; sourceTree = "<group>"; };
 		48942B8E1D8E365500D71B0F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		48B6DC0B1DE17F7100D435BA /* SendDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataViewController.swift; sourceTree = "<group>"; };
 		48CE1E331D8E5DF500B236FA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = NCMB/LoginViewController.swift; sourceTree = "<group>"; };
 		48CE1E351D8E647100B236FA /* LogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogoutViewController.swift; path = NCMB/LogoutViewController.swift; sourceTree = "<group>"; };
 		48F197F31DCF03FD001C07BE /* TimeLineShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineShowViewController.swift; sourceTree = "<group>"; };
@@ -285,8 +285,8 @@
 				48942B8E1D8E365500D71B0F /* SignUpViewController.swift */,
 				48CE1E331D8E5DF500B236FA /* LoginViewController.swift */,
 				48CE1E351D8E647100B236FA /* LogoutViewController.swift */,
-				487879B11DA0F8DA007EFBF6 /* CustomTableViewCell.swift */,
 				48F197F31DCF03FD001C07BE /* TimeLineShowViewController.swift */,
+				48B6DC0B1DE17F7100D435BA /* SendDataViewController.swift */,
 			);
 			path = pictureSNS;
 			sourceTree = "<group>";
@@ -718,10 +718,10 @@
 				487CC3111D1635A4005EED73 /* NCMBOAServiceTicket.m in Sources */,
 				487CC3091D1635A4005EED73 /* Base64Transcoder.c in Sources */,
 				48942B8F1D8E365500D71B0F /* SignUpViewController.swift in Sources */,
+				48B6DC0C1DE17F7100D435BA /* SendDataViewController.swift in Sources */,
 				487CC30D1D1635A4005EED73 /* NCMBOADataFetcher.m in Sources */,
 				487CC31E1D1635A4005EED73 /* NCMBSetOperation.m in Sources */,
 				487CC2F31D1635A4005EED73 /* NCMBAnalytics.m in Sources */,
-				487879B21DA0F8DA007EFBF6 /* CustomTableViewCell.swift in Sources */,
 				487CC2FA1D1635A4005EED73 /* NCMBInstallation.m in Sources */,
 				487CC3151D1635A4005EED73 /* NCMBURLConnection.m in Sources */,
 				487CC30F1D1635A4005EED73 /* NCMBOAMutableURLRequest.m in Sources */,

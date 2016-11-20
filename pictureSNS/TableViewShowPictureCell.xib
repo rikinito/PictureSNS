@@ -12,18 +12,29 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="74" id="R1D-aY-sPL" customClass="TableViewShowPictureCell" customModule="pictureSNS" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="433" height="74"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R1D-aY-sPL" id="PyC-iL-GVb">
-                <rect key="frame" x="0.0" y="0.0" width="433" height="73.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ai.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="KsC-DD-SwJ">
-                        <rect key="frame" x="0.0" y="0.0" width="99" height="74"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2vr-Dg-LWh">
+                        <rect key="frame" x="0.0" y="46" width="375" height="485"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYB-p7-pUD">
-                        <rect key="frame" x="225" y="27" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKo-7k-Rj9">
+                        <rect key="frame" x="17" y="533" width="340" height="66"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JgB-k0-jZM">
+                        <rect key="frame" x="8" y="1" width="74" height="44"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwc-vP-lh8">
+                        <rect key="frame" x="90" y="5" width="157" height="37"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -32,12 +43,12 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="pictureImageView" destination="KsC-DD-SwJ" id="7UV-dT-Lir"/>
+                <outlet property="ImageView" destination="2vr-Dg-LWh" id="Vg8-Aa-6Gd"/>
+                <outlet property="UserIcon" destination="JgB-k0-jZM" id="jvZ-pB-3DP"/>
+                <outlet property="UserName" destination="Zwc-vP-lh8" id="U3q-m8-o95"/>
+                <outlet property="comment" destination="gKo-7k-Rj9" id="12b-QL-ip8"/>
             </connections>
-            <point key="canvasLocation" x="-27.5" y="1"/>
+            <point key="canvasLocation" x="-28.5" y="1"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="ai.jpeg" width="1200" height="1200"/>
-    </resources>
 </document>

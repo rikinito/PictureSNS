@@ -16,12 +16,14 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        
-//        let nib:UINib = UINib(nibName: "TableViewShowPictureCell", bundle: nil)
-//        self.table.register(nib, forCellReuseIdentifier: "Cell")
-        reload()
+        
+        self.table.register(UINib(nibName: "TableViewShowPictureCell", bundle: nil), forCellReuseIdentifier: "PictureCell")
         self.table.delegate = self
-
+        self.table.dataSource = self
+        
+        reload()
+        
+        
         
     }
     
@@ -51,8 +53,7 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
                         
                         
                         let file:NCMBFile = NCMBFile.file(withName: fileName as!
-                            String,data: nil ) as!
-                        NCMBFile
+                            String,data: nil ) as! NCMBFile
                         var data : Data!
                         
                         do {
@@ -71,7 +72,7 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
                     }
                     
                 }
-                 //                self.table.reloadData()
+                self.table.reloadData()
                 
                 
                 
@@ -89,15 +90,17 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
         -> UITableViewCell {
             
-//            let cell: TableViewShowPictureCell = (tableView.dequeueReusableCell(withIdentifier: "Cell") as! TableViewShowPictureCell)
-//            
-//            cell.pictureImageView?.image = images[indexPath.section]
+            let cell : TableViewShowPictureCell = table.dequeueReusableCell(withIdentifier: "PictureCell",for: indexPath) as! TableViewShowPictureCell
             
-            let cell = table.dequeueReusableCell(withIdentifier: "CustomCell",for: indexPath)
-            let imageView = (table.viewWithTag(1) as! UIImageView)
-            imageView.image  = images[indexPath.section]
-
+            cell.imageView?.image = images[indexPath.section]
+            
+            
+            //
+            //            let imageView = (table.viewWithTag(1) as! UIImageView)
+            //            imageView.image  = images[indexPath.section]
+            
             return cell
+            
             
     }
     
@@ -132,63 +135,70 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
         //このif条件はおまじないという認識で今は良いと思う
         if didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] != nil {
             
+             let image: UIImage = (didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage]as? UIImage)!
+            
+            SendDataViewController.imageData = image
+            self.performSegue(withIdentifier: "GoToSendDataContlloer", sender: nil)
+    
+
+            
             //didFinishPickingMediaWithInfo通して渡された情報(選択された画像情報が入っている？)をUIImageにCastする
             //そしてそれを宣言済みのimageViewへ放り込む
             
-            let image: UIImage = (didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage]as? UIImage)!
-            
-            let size = CGSize(width: 150, height: 150)
-            UIGraphicsBeginImageContext(size)
-            image.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
-            let resizeImage = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-            
-            //          画像の送信
-            let imageData : Data = NSData(data: UIImagePNGRepresentation(resizeImage!)!) as Data
-            
-            let date = Date() // Dec 27, 2015, 7:16 PM
-            
-            let format = DateFormatter()
-            format.dateFormat = "yyyy-MM-dd-HH-mm-ss"
-            
-            
-            let strDate = format.string(from: date)
-            let fileName = strDate+".png"
-            let file:NCMBFile = NCMBFile.file(withName: fileName ,data: imageData) as!
-            NCMBFile
-            let acl = NCMBACL()
-            //
-            acl.setPublicReadAccess(true)
-            acl.setPublicWriteAccess(true)
-            file.acl = acl
-            
-            var error1 : NSError?
-            file.save(&error1)
-            if error1 != nil {
-                //print("Image data save error : ",error1)
-            }else {
-                print("success")
-            }
-            
-            
-            //            データの送信
-            let obj = NCMBObject(className: "lifeistech")
-            obj?.setObject(NCMBUser.current(), forKey: "UserName")
-            obj?.setObject(fileName,forKey: "FileName")
-            var saveError: NSError?
-            obj?.save(&saveError)
-            
-            if saveError == nil {
-                print("[SAVE] Dome")
-            } else {
-                print("[SAVE-ERROR] /(saveError)")
-                
-                
-            }
-            
-            
-            
-        }
+//           
+//            
+//            let size = CGSize(width: 150, height: 150)
+//            UIGraphicsBeginImageContext(size)
+//            image.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
+//            let resizeImage = UIGraphicsGetImageFromCurrentImageContext()
+//            UIGraphicsEndImageContext()
+//            
+//            //          画像の送信
+//            let imageData : Data = NSData(data: UIImagePNGRepresentation(resizeImage!)!) as Data
+//            
+//            let date = Date() // Dec 27, 2015, 7:16 PM
+//            
+//            let format = DateFormatter()
+//            format.dateFormat = "yyyy-MM-dd-HH-mm-ss"
+//            
+//            
+//            let strDate = format.string(from: date)
+//            let fileName = strDate+".png"
+//            let file:NCMBFile = NCMBFile.file(withName: fileName ,data: imageData) as!
+//            NCMBFile
+//            let acl = NCMBACL()
+//            //
+//            acl.setPublicReadAccess(true)
+//            acl.setPublicWriteAccess(true)
+//            file.acl = acl
+//            
+//            var error1 : NSError?
+//            file.save(&error1)
+//            if error1 != nil {
+//                //print("Image data save error : ",error1)
+//            }else {
+//                print("success")
+//            }
+//            
+//            
+//            //            データの送信
+//            let obj = NCMBObject(className: "lifeistech")
+//            obj?.setObject(NCMBUser.current(), forKey: "UserName")
+//            obj?.setObject(fileName,forKey: "FileName")
+//            var saveError: NSError?
+//            obj?.save(&saveError)
+//            
+//            if saveError == nil {
+//                print("[SAVE] Dome")
+//            } else {
+//                print("[SAVE-ERROR] /(saveError)")
+//                
+//                
+//            }
+//            
+//            
+//            
+//        }
         
         //写真選択後にカメラロール表示ViewControllerを引っ込める動作
         picker.dismiss(animated: true, completion: nil)

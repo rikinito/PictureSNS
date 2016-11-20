@@ -10,7 +10,14 @@ import UIKit
 
 class TableViewShowPictureCell: UITableViewCell {
     
-    @IBOutlet var pictureImageView: UIImageView!
+    @IBOutlet weak var UserIcon: UIImageView!
+  
+    @IBOutlet weak var UserName: UILabel!
+    
+    @IBOutlet weak var ImageView: UIImageView!
+
+    @IBOutlet weak var comment: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
