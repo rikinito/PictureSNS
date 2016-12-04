@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.text="malkods0505akbnmoms@gmail.com"
-        passwordTextField.text = "Riki@2103"
+        passwordTextField.text = "12345"
         
         // Do any additional setup after loading the view.
         //        emailTextField.delegate = self
@@ -168,4 +168,3 @@ class LoginViewController: UIViewController {
     }
     
 }
-

@@ -13,9 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    let applicationkey = "7d1214db44e0e0336f395d08508fa624eda63035372f11aabe6a89d6820e6d56"
+    let applicationkey = "4fbc41f39c5df68fb5a5ccf5617c13048caae7dccf40ae8a32630ba047726af1"
     
-    let clientkey       = "91e4707e346487255b4636e6f65b031f607c55b077fb31dcfaffa6a6be4036cc"
+    let clientkey       = "ad0051399a08a8fe9d6535c88e788b224cc63583fc56af75e69fe8632f8d090b"
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

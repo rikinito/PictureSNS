@@ -34,7 +34,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate,UINavigat
 //        
 //        
 //                        }
-        
+//        
         //         データの取得
         //        let query = NCMBQuery(className: "lifeistech")
         //        query.whereKey("message", equalTo: "hello")

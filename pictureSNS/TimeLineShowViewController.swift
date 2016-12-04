@@ -12,11 +12,16 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var table: UITableView!
     
     var images : [UIImage] = [UIImage]()
+    var texts : [String] = [String]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        self.table.estimatedRowHeight = 600
+//        self.table.rowHeight = UITableViewAutomaticDimension
+
+        self.table.rowHeight = 250
         self.table.register(UINib(nibName: "TableViewShowPictureCell", bundle: nil), forCellReuseIdentifier: "PictureCell")
         self.table.delegate = self
         self.table.dataSource = self
@@ -44,14 +49,23 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
             
             if (objects?.count)! > 0 {
                 
+                self.images.removeAll()
+                self.texts.removeAll()
+
+                
                 for i in 0...(objects?.count)!-1 {
-                    
+                                        
                     // オヴジェクトが見つかった場合は表示
                     if let obj = objects?[i] as? NCMBObject {
+                        
+                        
+                        let text = obj.object(forKey: "Expression")
+                        self.texts.append(text as! String)
+
+                        
+                        
+                        
                         let fileName = obj.object(forKey: "FileName")
-                        
-                        
-                        
                         let file:NCMBFile = NCMBFile.file(withName: fileName as!
                             String,data: nil ) as! NCMBFile
                         var data : Data!
@@ -64,7 +78,7 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
                         }
                         
                         
-                        
+                
                         
                         self.images.append(UIImage(data: data)!)
                         print(UIImage(data: data)!.size)
@@ -92,13 +106,15 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
             
             let cell : TableViewShowPictureCell = table.dequeueReusableCell(withIdentifier: "PictureCell",for: indexPath) as! TableViewShowPictureCell
             
-            cell.imageView?.image = images[indexPath.section]
+            cell.imageView?.image = images[indexPath.row]
+            cell.comment.text = texts[indexPath.row]
+            print(texts[indexPath.row])
             
             
             //
             //            let imageView = (table.viewWithTag(1) as! UIImageView)
             //            imageView.image  = images[indexPath.section]
-            
+            //cell.layoutIfNeeded()
             return cell
             
             
@@ -132,101 +148,48 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo: [String: Any]) {
         
+        print("@@@")
+        
         //このif条件はおまじないという認識で今は良いと思う
         if didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage] != nil {
             
-             let image: UIImage = (didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage]as? UIImage)!
+            let image: UIImage = (didFinishPickingMediaWithInfo[UIImagePickerControllerOriginalImage]as? UIImage)!
             
             SendDataViewController.imageData = image
+            
+            
+            //写真選択後にカメラロール表示ViewControllerを引っ込める動作
+            picker.dismiss(animated: true, completion: nil)
+            
             self.performSegue(withIdentifier: "GoToSendDataContlloer", sender: nil)
-    
-
             
-            //didFinishPickingMediaWithInfo通して渡された情報(選択された画像情報が入っている？)をUIImageにCastする
-            //そしてそれを宣言済みのimageViewへ放り込む
-            
-//           
-//            
-//            let size = CGSize(width: 150, height: 150)
-//            UIGraphicsBeginImageContext(size)
-//            image.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height))
-//            let resizeImage = UIGraphicsGetImageFromCurrentImageContext()
-//            UIGraphicsEndImageContext()
-//            
-//            //          画像の送信
-//            let imageData : Data = NSData(data: UIImagePNGRepresentation(resizeImage!)!) as Data
-//            
-//            let date = Date() // Dec 27, 2015, 7:16 PM
-//            
-//            let format = DateFormatter()
-//            format.dateFormat = "yyyy-MM-dd-HH-mm-ss"
-//            
-//            
-//            let strDate = format.string(from: date)
-//            let fileName = strDate+".png"
-//            let file:NCMBFile = NCMBFile.file(withName: fileName ,data: imageData) as!
-//            NCMBFile
-//            let acl = NCMBACL()
-//            //
-//            acl.setPublicReadAccess(true)
-//            acl.setPublicWriteAccess(true)
-//            file.acl = acl
-//            
-//            var error1 : NSError?
-//            file.save(&error1)
-//            if error1 != nil {
-//                //print("Image data save error : ",error1)
-//            }else {
-//                print("success")
-//            }
-//            
-//            
-//            //            データの送信
-//            let obj = NCMBObject(className: "lifeistech")
-//            obj?.setObject(NCMBUser.current(), forKey: "UserName")
-//            obj?.setObject(fileName,forKey: "FileName")
-//            var saveError: NSError?
-//            obj?.save(&saveError)
-//            
-//            if saveError == nil {
-//                print("[SAVE] Dome")
-//            } else {
-//                print("[SAVE-ERROR] /(saveError)")
-//                
-//                
-//            }
-//            
-//            
-//            
-//        }
-        
-        //写真選択後にカメラロール表示ViewControllerを引っ込める動作
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
-    
-    
-    @IBDesignable class CustomButton: UIButton {
-        
-        // 角丸の半径(0で四角形)
-        @IBInspectable var cornerRadius: CGFloat = 0.0
-        
-        // 枠
-        @IBInspectable var borderColor: UIColor = UIColor.clear
-        @IBInspectable var borderWidth: CGFloat = 0.0
-        
-        override func draw(_ rect: CGRect) {
-            // 角丸
-            self.layer.cornerRadius = cornerRadius
-            self.clipsToBounds = (cornerRadius > 0)
-            
-            // 枠線
-            self.layer.borderColor = borderColor.cgColor
-            self.layer.borderWidth = borderWidth
-            
-            super.draw(rect)
+           
         }
+        
+        
+        
+        @IBDesignable class CustomButton: UIButton {
+            
+            // 角丸の半径(0で四角形)
+            @IBInspectable var cornerRadius: CGFloat = 0.0
+            
+            // 枠
+            @IBInspectable var borderColor: UIColor = UIColor.clear
+            @IBInspectable var borderWidth: CGFloat = 0.0
+            
+            override func draw(_ rect: CGRect) {
+                // 角丸
+                self.layer.cornerRadius = cornerRadius
+                self.clipsToBounds = (cornerRadius > 0)
+                
+                // 枠線
+                self.layer.borderColor = borderColor.cgColor
+                self.layer.borderWidth = borderWidth
+                
+                super.draw(rect)
+            }
+        }
+        
     }
     
 }
-

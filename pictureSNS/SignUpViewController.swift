@@ -47,11 +47,18 @@ class SignUpViewController: UIViewController,UITextFieldDelegate{
     
     @IBAction func didSelectSignup() {
         
+        
+        let email = "malkods0505akbnmoms@gmail.com"
+        let pass = "12345"
+        let name = "Riki"
+        let confirm = "12345"
+
+        
         print("ログイン")
-        guard let email = emailTextField.text else { return }
-        guard let pass = passwordTextField.text else { return }
-        guard let name = nameTextField.text else { return }
-        guard let confirm = confirmPasswordTextField.text else { return }
+//        guard let email = emailTextField.text else { return }
+//        guard let pass = passwordTextField.text else { return }
+//        guard let name = nameTextField.text else { return }
+//        guard let confirm = confirmPasswordTextField.text else { return }
         print(email)
         print(pass)
         print(confirm)
