@@ -20,10 +20,6 @@ class LoginViewController: UIViewController {
         emailTextField.text="malkods0505akbnmoms@gmail.com"
         passwordTextField.text = "12345"
         
-        // Do any additional setup after loading the view.
-        //        emailTextField.delegate = self
-        //        passwordTextField.delegate = sself
-        
         passwordTextField.isSecureTextEntry = true
     }
     
@@ -75,38 +71,7 @@ class LoginViewController: UIViewController {
             }
         }
         
-        //        let user = NCMBUser()
-        //        //ユーザー名を設定
-        //        user.userName = "user1"
-        //        //パスワードを設定
-        //        user.password = "password1"
-        //        //会員の登録を行う
-        //        user.signUpInBackgroundWithBlock{(error: NSError!) in
-        //            if error != nil {
-        //                // 新規登録失敗時の処理
-        //                print("新規登録失敗")
-        //
-        //            }else{
-        //                // 新規登録成功時の処理
-        //                print("新規登録成功")
-        //
-        //            }
-        //        }
-        //
-        //        // ユーザー名とパスワードでログイン
-        //        NCMBUser.logInWithUsernameInBackground("user1", password: "password1", block:{(user: NCMBUser!, error: NSError!) in
-        //            if error != nil {
-        //                // ログイン失敗時の処理
-        //                print("ログイン失敗")
-        //
-        //            }else{
-        //                // ログイン成功時の処理
-        //                print("ログイン成功")
-        //
-        //            }
-        //        })
-        //
-        
+               
     }
     
     func requestResetPassword(email address: String) {

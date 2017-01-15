@@ -18,8 +18,6 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.table.estimatedRowHeight = 600
-//        self.table.rowHeight = UITableViewAutomaticDimension
 
         self.table.rowHeight = 250
         self.table.register(UINib(nibName: "TableViewShowPictureCell", bundle: nil), forCellReuseIdentifier: "PictureCell")
@@ -109,12 +107,7 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
             cell.imageView?.image = images[indexPath.row]
             cell.comment.text = texts[indexPath.row]
             print(texts[indexPath.row])
-            
-            
-            //
-            //            let imageView = (table.viewWithTag(1) as! UIImageView)
-            //            imageView.image  = images[indexPath.section]
-            //cell.layoutIfNeeded()
+          
             return cell
             
             

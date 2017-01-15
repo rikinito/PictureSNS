@@ -76,7 +76,7 @@ class SendDataViewController: UIViewController{
             
         }
         
-        dismiss(animated: true, completion: nil)
+    
     
     }
     
