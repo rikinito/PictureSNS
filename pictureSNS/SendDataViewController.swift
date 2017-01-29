@@ -24,7 +24,7 @@ class SendDataViewController: UIViewController{
         
         
         // リサイズ
-        let re = CGRect(x: 0, y: 0, width: 150, height: 150)
+        let re = CGRect(x: 0, y: 0, width: 300, height: 300)
         UIGraphicsBeginImageContext(re.size)
         SendDataViewController.imageData.draw(in: re)
         let resizeImage = UIGraphicsGetImageFromCurrentImageContext()

@@ -24,6 +24,10 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
         self.table.delegate = self
         self.table.dataSource = self
         
+       // self.table.rowHeight = 800
+    
+        
+        
         reload()
         
         
@@ -104,9 +108,21 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
             
             let cell : TableViewShowPictureCell = table.dequeueReusableCell(withIdentifier: "PictureCell",for: indexPath) as! TableViewShowPictureCell
             
+          
+            let re = CGRect(x:0,y:0,width:table.frame.width,height:table.frame.width)
+            UIGraphicsBeginImageContext(re.size)
+            images[indexPath.row].draw(in: re)
+            let resizeImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            //cell.imageView?.image = resizeImage
             cell.imageView?.image = images[indexPath.row]
+            
+            
+            //cell.imageView?.frame = CGRect(x:0,y:0,width:table.frame.width-50,height:table.frame.width)
             cell.comment.text = texts[indexPath.row]
-            print(texts[indexPath.row])
+            print(cell.frame)
+            print(cell.imageView?.frame)
+            print(cell.imageView?.image?.size)
           
             return cell
             
