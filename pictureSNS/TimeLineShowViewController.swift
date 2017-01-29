@@ -24,7 +24,7 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
         self.table.delegate = self
         self.table.dataSource = self
         
-       // self.table.rowHeight = 800
+       self.table.rowHeight = 600
     
         
         
