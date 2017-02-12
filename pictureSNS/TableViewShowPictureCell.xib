@@ -28,9 +28,8 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKo-7k-Rj9">
-                        <rect key="frame" x="0.0" y="529.5" width="300" height="70"/>
+                        <rect key="frame" x="0.0" y="530" width="300" height="70"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="70" id="jAe-m9-cjj"/>
                             <constraint firstAttribute="width" constant="300" id="yME-Cf-OaJ"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -54,7 +53,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoF-Ed-Bhu">
-                        <rect key="frame" x="104" y="471" width="52" height="50"/>
+                        <rect key="frame" x="104" y="474" width="52" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="52" id="Fwd-q6-FLH"/>
                             <constraint firstAttribute="height" constant="50" id="m5T-pb-rQd"/>
@@ -62,21 +61,30 @@
                         </constraints>
                         <state key="normal" backgroundImage="14328.png"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paU-DM-GPt">
-                        <rect key="frame" x="20" y="471.5" width="50" height="50"/>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paU-DM-GPt">
+                        <rect key="frame" x="20" y="474" width="50" height="50"/>
                         <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="2cZ-y3-icm"/>
                             <constraint firstAttribute="width" constant="50" id="3zV-RZ-KKh"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="LTX-Bl-eOO"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="SdB-eX-iF5"/>
                             <constraint firstAttribute="height" constant="50" id="bCJ-PJ-7Fr"/>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="fI0-fl-Goa"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="quv-Dl-MSX"/>
                         </constraints>
-                        <state key="normal" backgroundImage="dislike01.jpg"/>
+                        <state key="normal" backgroundImage="facebook.png"/>
+                        <connections>
+                            <action selector="iine:" destination="R1D-aY-sPL" eventType="touchUpInside" id="11S-Gv-b6z"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="JgB-k0-jZM" firstAttribute="top" secondItem="PyC-iL-GVb" secondAttribute="topMargin" constant="12" id="0z0-go-Y7n"/>
                     <constraint firstItem="paU-DM-GPt" firstAttribute="centerY" secondItem="AoF-Ed-Bhu" secondAttribute="centerY" id="1I1-Ze-32C"/>
                     <constraint firstAttribute="trailingMargin" secondItem="AoF-Ed-Bhu" secondAttribute="trailing" constant="250" id="3tJ-AA-aTM"/>
+                    <constraint firstItem="gKo-7k-Rj9" firstAttribute="top" secondItem="paU-DM-GPt" secondAttribute="bottom" constant="5" id="9HG-qd-7Vs"/>
                     <constraint firstItem="AoF-Ed-Bhu" firstAttribute="centerX" secondItem="Zwc-vP-lh8" secondAttribute="centerX" id="B7e-IW-5Sh"/>
+                    <constraint firstItem="paU-DM-GPt" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leadingMargin" constant="15" id="CJF-VS-H9o"/>
                     <constraint firstItem="JgB-k0-jZM" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leadingMargin" constant="12" id="EZU-O6-vKr"/>
                     <constraint firstItem="JgB-k0-jZM" firstAttribute="centerY" secondItem="Zwc-vP-lh8" secondAttribute="centerY" id="GOo-Mu-gi3"/>
                     <constraint firstItem="2vr-Dg-LWh" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leading" id="ICF-LX-ngA"/>
@@ -87,12 +95,13 @@
                     <constraint firstItem="2vr-Dg-LWh" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leading" id="Puu-F7-zNF"/>
                     <constraint firstItem="2vr-Dg-LWh" firstAttribute="top" secondItem="JgB-k0-jZM" secondAttribute="bottom" constant="8" symbolic="YES" id="Q26-h5-fiB"/>
                     <constraint firstItem="AoF-Ed-Bhu" firstAttribute="baseline" secondItem="paU-DM-GPt" secondAttribute="baseline" id="SiP-Ga-fZr"/>
-                    <constraint firstItem="gKo-7k-Rj9" firstAttribute="top" secondItem="paU-DM-GPt" secondAttribute="bottom" constant="8" symbolic="YES" id="UNR-M4-JwM"/>
                     <constraint firstItem="JgB-k0-jZM" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leading" constant="20" id="XH3-hS-TFf"/>
-                    <constraint firstItem="paU-DM-GPt" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leading" constant="20" id="YCB-7c-p9L"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="gKo-7k-Rj9" secondAttribute="bottom" constant="-9" id="axG-SG-GHZ"/>
+                    <constraint firstItem="paU-DM-GPt" firstAttribute="top" secondItem="2vr-Dg-LWh" secondAttribute="bottom" constant="1" id="k52-oD-rB8"/>
                     <constraint firstItem="2vr-Dg-LWh" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leading" id="kE0-XF-oMN"/>
+                    <constraint firstItem="gKo-7k-Rj9" firstAttribute="top" secondItem="paU-DM-GPt" secondAttribute="bottom" constant="6" id="p6k-4d-dVy"/>
                     <constraint firstItem="Zwc-vP-lh8" firstAttribute="top" secondItem="PyC-iL-GVb" secondAttribute="topMargin" constant="22" id="ujG-zY-8Po"/>
-                    <constraint firstAttribute="bottom" secondItem="paU-DM-GPt" secondAttribute="bottom" constant="78" id="vNF-8r-o4v"/>
+                    <constraint firstItem="paU-DM-GPt" firstAttribute="top" secondItem="2vr-Dg-LWh" secondAttribute="bottom" constant="1" id="va6-Nc-uYl"/>
                     <constraint firstItem="JgB-k0-jZM" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leading" constant="20" id="vtW-HL-g2O"/>
                     <constraint firstAttribute="trailing" secondItem="2vr-Dg-LWh" secondAttribute="trailing" id="zcW-cD-u1t"/>
                     <constraint firstItem="JgB-k0-jZM" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leading" constant="20" id="zmr-Gf-JBJ"/>
@@ -104,6 +113,7 @@
                 <outlet property="UserIcon" destination="JgB-k0-jZM" id="jvZ-pB-3DP"/>
                 <outlet property="UserName" destination="Zwc-vP-lh8" id="U3q-m8-o95"/>
                 <outlet property="comment" destination="gKo-7k-Rj9" id="12b-QL-ip8"/>
+                <outlet property="iineButton" destination="paU-DM-GPt" id="1cI-4w-8GI"/>
             </connections>
             <point key="canvasLocation" x="-29" y="1"/>
         </tableViewCell>
@@ -111,6 +121,6 @@
     <resources>
         <image name="130383_n.jpg" width="400" height="400"/>
         <image name="14328.png" width="256" height="182"/>
-        <image name="dislike01.jpg" width="390" height="375"/>
+        <image name="facebook.png" width="200" height="200"/>
     </resources>
 </document>

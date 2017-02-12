@@ -13,7 +13,7 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
     
     var images : [UIImage] = [UIImage]()
     var texts : [String] = [String]()
-    
+    var Ids : [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +21,7 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
 
         self.table.rowHeight = 250
         self.table.register(UINib(nibName: "TableViewShowPictureCell", bundle: nil), forCellReuseIdentifier: "PictureCell")
-        self.table.delegate = self
-        self.table.dataSource = self
+        
         
        self.table.rowHeight = 600
     
@@ -60,11 +59,15 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
                     // オヴジェクトが見つかった場合は表示
                     if let obj = objects?[i] as? NCMBObject {
                         
+                        let id = obj.objectId
+                        print(id)
+                        self.texts.append(id!)
+                        
                         
                         let text = obj.object(forKey: "Expression")
                         self.texts.append(text as! String)
 
-                        
+                        print(text)
                         
                         
                         let fileName = obj.object(forKey: "FileName")
@@ -95,6 +98,8 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
             }
         })
         
+        self.table.delegate = self
+        self.table.dataSource = self
         
         
     }
@@ -115,10 +120,16 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
             let resizeImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             //cell.imageView?.image = resizeImage
+            
+            print(images.count)
+            print(Ids.count)
+            
             cell.imageView?.image = images[indexPath.row]
             
             
             //cell.imageView?.frame = CGRect(x:0,y:0,width:table.frame.width-50,height:table.frame.width)
+            //cell.objctId = Ids[indexPath.row]
+            
             cell.comment.text = texts[indexPath.row]
             print(cell.frame)
             print(cell.imageView?.frame)
@@ -129,6 +140,7 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
             
     }
     
+
     
     
     

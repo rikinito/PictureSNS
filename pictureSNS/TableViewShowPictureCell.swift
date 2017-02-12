@@ -17,7 +17,13 @@ class TableViewShowPictureCell: UITableViewCell {
     @IBOutlet weak var ImageView: UIImageView!
 
     @IBOutlet weak var comment: UILabel!
+    @IBOutlet weak var iineButton: UIButton!
     
+    
+    var objctId : String = ""
+    
+  
+   
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,5 +34,9 @@ class TableViewShowPictureCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
         // Configure the view for selected state
+    }
+    @IBAction func iine(_ sender: Any) {
+        
+        print("いいね！")
     }
 }

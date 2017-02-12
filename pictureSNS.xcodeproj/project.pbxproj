@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		481D903C1E3DD1EA00D64C5F /* 130383_n.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 481D903B1E3DD1EA00D64C5F /* 130383_n.jpg */; };
-		481D903E1E3DD39D00D64C5F /* 14328.png in Resources */ = {isa = PBXBuildFile; fileRef = 481D903D1E3DD39D00D64C5F /* 14328.png */; };
-		481D90461E3DD74500D64C5F /* dislike01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 481D90451E3DD74500D64C5F /* dislike01.jpg */; };
 		483313EA1D28A04500CBEECA /* original.png in Resources */ = {isa = PBXBuildFile; fileRef = 483313E91D28A04500CBEECA /* original.png */; };
 		487CC24A1D163562005EED73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487CC2491D163562005EED73 /* AppDelegate.swift */; };
 		487CC24F1D163562005EED73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 487CC24D1D163562005EED73 /* Main.storyboard */; };
@@ -76,8 +74,10 @@
 		48B4888D1E2B404B00BC464C /* アップロード.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B4888C1E2B404B00BC464C /* アップロード.png */; };
 		48B488911E2B462100BC464C /* アセット 13.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B488901E2B462100BC464C /* アセット 13.png */; };
 		48B6DC0C1DE17F7100D435BA /* SendDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B6DC0B1DE17F7100D435BA /* SendDataViewController.swift */; };
+		48C11E951E5045DD00292D5C /* 14328.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C11E941E5045DD00292D5C /* 14328.png */; };
 		48CE1E341D8E5DF500B236FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE1E331D8E5DF500B236FA /* LoginViewController.swift */; };
 		48CE1E361D8E647100B236FA /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE1E351D8E647100B236FA /* LogoutViewController.swift */; };
+		48EEEDE71E5004FB009D3BAA /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 48EEEDE61E5004FB009D3BAA /* facebook.png */; };
 		48F197F41DCF03FD001C07BE /* TimeLineShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F197F31DCF03FD001C07BE /* TimeLineShowViewController.swift */; };
 		48F197F71DCF0D7B001C07BE /* TableViewShowPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F197F61DCF0D7B001C07BE /* TableViewShowPictureCell.swift */; };
 		48F197F91DCF0DE0001C07BE /* TableViewShowPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48F197F81DCF0DE0001C07BE /* TableViewShowPictureCell.xib */; };
@@ -102,8 +102,6 @@
 
 /* Begin PBXFileReference section */
 		481D903B1E3DD1EA00D64C5F /* 130383_n.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 130383_n.jpg; sourceTree = "<group>"; };
-		481D903D1E3DD39D00D64C5F /* 14328.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 14328.png; sourceTree = "<group>"; };
-		481D90451E3DD74500D64C5F /* dislike01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dislike01.jpg; sourceTree = "<group>"; };
 		483313E91D28A04500CBEECA /* original.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = original.png; sourceTree = "<group>"; };
 		487CC2461D163562005EED73 /* pictureSNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pictureSNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		487CC2491D163562005EED73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -234,8 +232,10 @@
 		48B4888C1E2B404B00BC464C /* アップロード.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アップロード.png"; sourceTree = "<group>"; };
 		48B488901E2B462100BC464C /* アセット 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アセット 13.png"; sourceTree = "<group>"; };
 		48B6DC0B1DE17F7100D435BA /* SendDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataViewController.swift; sourceTree = "<group>"; };
+		48C11E941E5045DD00292D5C /* 14328.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 14328.png; sourceTree = "<group>"; };
 		48CE1E331D8E5DF500B236FA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = NCMB/LoginViewController.swift; sourceTree = "<group>"; };
 		48CE1E351D8E647100B236FA /* LogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogoutViewController.swift; path = NCMB/LogoutViewController.swift; sourceTree = "<group>"; };
+		48EEEDE61E5004FB009D3BAA /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
 		48F197F31DCF03FD001C07BE /* TimeLineShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineShowViewController.swift; sourceTree = "<group>"; };
 		48F197F61DCF0D7B001C07BE /* TableViewShowPictureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewShowPictureCell.swift; sourceTree = "<group>"; };
 		48F197F81DCF0DE0001C07BE /* TableViewShowPictureCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewShowPictureCell.xib; sourceTree = "<group>"; };
@@ -548,8 +548,7 @@
 		48B4887F1E2B25FF00BC464C /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				481D90451E3DD74500D64C5F /* dislike01.jpg */,
-				481D903D1E3DD39D00D64C5F /* 14328.png */,
+				48C11E941E5045DD00292D5C /* 14328.png */,
 				48B488901E2B462100BC464C /* アセット 13.png */,
 				481D903B1E3DD1EA00D64C5F /* 130383_n.jpg */,
 				48B4888C1E2B404B00BC464C /* アップロード.png */,
@@ -557,6 +556,7 @@
 				48B488841E2B3CF200BC464C /* 登録.png */,
 				48B488801E2B261600BC464C /* SingUP.png */,
 				48B488821E2B269000BC464C /* LogIn.png */,
+				48EEEDE61E5004FB009D3BAA /* facebook.png */,
 			);
 			name = Image;
 			sourceTree = "<group>";
@@ -638,7 +638,7 @@
 				TargetAttributes = {
 					487CC2451D163562005EED73 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 66M7BL3A9M;
+						DevelopmentTeam = M4BU57H422;
 						LastSwiftMigration = 0810;
 					};
 					487CC2591D163562005EED73 = {
@@ -681,21 +681,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				487CC2F11D1635A4005EED73 /* NCMB_Info.plist in Resources */,
+				48C11E951E5045DD00292D5C /* 14328.png in Resources */,
 				487CC2541D163562005EED73 /* LaunchScreen.storyboard in Resources */,
 				48B488831E2B269000BC464C /* LogIn.png in Resources */,
 				481D903C1E3DD1EA00D64C5F /* 130383_n.jpg in Resources */,
 				48B4888D1E2B404B00BC464C /* アップロード.png in Resources */,
+				48EEEDE71E5004FB009D3BAA /* facebook.png in Resources */,
 				48B488851E2B3CF200BC464C /* 登録.png in Resources */,
 				487CC2511D163562005EED73 /* Assets.xcassets in Resources */,
 				48B488811E2B261600BC464C /* SingUP.png in Resources */,
 				487CC3251D168741005EED73 /* ai.jpeg in Resources */,
-				481D903E1E3DD39D00D64C5F /* 14328.png in Resources */,
 				48F197F91DCF0DE0001C07BE /* TableViewShowPictureCell.xib in Resources */,
 				483313EA1D28A04500CBEECA /* original.png in Resources */,
 				48B488911E2B462100BC464C /* アセット 13.png in Resources */,
 				48B4888B1E2B3FD700BC464C /* アセット 9.png in Resources */,
 				487CC24F1D163562005EED73 /* Main.storyboard in Resources */,
-				481D90461E3DD74500D64C5F /* dislike01.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -917,10 +917,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 66M7BL3A9M;
+				DEVELOPMENT_TEAM = M4BU57H422;
 				INFOPLIST_FILE = pictureSNS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.litech.pictureSNSApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litechApp.pictureSNSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "pictureSNS/pictureSNS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -931,10 +931,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 66M7BL3A9M;
+				DEVELOPMENT_TEAM = M4BU57H422;
 				INFOPLIST_FILE = pictureSNS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.litech.pictureSNSApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.litechApp.pictureSNSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "pictureSNS/pictureSNS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
