@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,7 +29,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKo-7k-Rj9">
-                        <rect key="frame" x="0.0" y="530" width="300" height="70"/>
+                        <rect key="frame" x="0.0" y="580" width="300" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="300" id="yME-Cf-OaJ"/>
                         </constraints>
@@ -44,7 +45,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="リッキー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwc-vP-lh8">
-                        <rect key="frame" x="80" y="30" width="100" height="30"/>
+                        <rect key="frame" x="80" y="30" width="148" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="CKC-2X-NeD"/>
                         </constraints>
@@ -53,56 +54,70 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AoF-Ed-Bhu">
-                        <rect key="frame" x="104" y="474" width="52" height="50"/>
+                        <rect key="frame" x="128" y="474" width="52" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="52" id="Fwd-q6-FLH"/>
-                            <constraint firstAttribute="height" constant="50" id="m5T-pb-rQd"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="G1E-pp-HDB"/>
+                            <constraint firstAttribute="width" constant="52" id="caW-RI-Sjd"/>
+                            <constraint firstAttribute="height" constant="50" id="hHX-xg-SYg"/>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="yrH-7T-d9k"/>
                         </constraints>
                         <state key="normal" backgroundImage="14328.png"/>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paU-DM-GPt">
-                        <rect key="frame" x="20" y="474" width="50" height="50"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paU-DM-GPt">
+                        <rect key="frame" x="23" y="474" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="2cZ-y3-icm"/>
-                            <constraint firstAttribute="width" constant="50" id="3zV-RZ-KKh"/>
                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="LTX-Bl-eOO"/>
                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="SdB-eX-iF5"/>
-                            <constraint firstAttribute="height" constant="50" id="bCJ-PJ-7Fr"/>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="fI0-fl-Goa"/>
-                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="quv-Dl-MSX"/>
                         </constraints>
                         <state key="normal" backgroundImage="facebook.png"/>
                         <connections>
                             <action selector="iine:" destination="R1D-aY-sPL" eventType="touchUpInside" id="11S-Gv-b6z"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na3-e2-ZdJ">
+                        <rect key="frame" x="78" y="478" width="42" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="42" id="G4f-ly-aCD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="JgB-k0-jZM" firstAttribute="top" secondItem="PyC-iL-GVb" secondAttribute="topMargin" constant="12" id="0z0-go-Y7n"/>
-                    <constraint firstItem="paU-DM-GPt" firstAttribute="centerY" secondItem="AoF-Ed-Bhu" secondAttribute="centerY" id="1I1-Ze-32C"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="AoF-Ed-Bhu" secondAttribute="trailing" constant="250" id="3tJ-AA-aTM"/>
-                    <constraint firstItem="gKo-7k-Rj9" firstAttribute="top" secondItem="paU-DM-GPt" secondAttribute="bottom" constant="5" id="9HG-qd-7Vs"/>
+                    <constraint firstItem="gKo-7k-Rj9" firstAttribute="top" secondItem="Na3-e2-ZdJ" secondAttribute="bottom" constant="60" id="50N-E3-UjB"/>
+                    <constraint firstItem="AoF-Ed-Bhu" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leading" constant="128" id="Aan-e3-Gep"/>
                     <constraint firstItem="AoF-Ed-Bhu" firstAttribute="centerX" secondItem="Zwc-vP-lh8" secondAttribute="centerX" id="B7e-IW-5Sh"/>
-                    <constraint firstItem="paU-DM-GPt" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leadingMargin" constant="15" id="CJF-VS-H9o"/>
+                    <constraint firstItem="AoF-Ed-Bhu" firstAttribute="firstBaseline" secondItem="paU-DM-GPt" secondAttribute="firstBaseline" id="Dhh-fe-yyn"/>
                     <constraint firstItem="JgB-k0-jZM" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leadingMargin" constant="12" id="EZU-O6-vKr"/>
                     <constraint firstItem="JgB-k0-jZM" firstAttribute="centerY" secondItem="Zwc-vP-lh8" secondAttribute="centerY" id="GOo-Mu-gi3"/>
                     <constraint firstItem="2vr-Dg-LWh" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leading" id="ICF-LX-ngA"/>
+                    <constraint firstItem="AoF-Ed-Bhu" firstAttribute="bottom" secondItem="paU-DM-GPt" secondAttribute="bottom" id="Ixa-Sg-Op0"/>
                     <constraint firstItem="JgB-k0-jZM" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leadingMargin" constant="12" id="Jqd-wN-ab9"/>
                     <constraint firstItem="gKo-7k-Rj9" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leading" id="Jtb-hu-clF"/>
+                    <constraint firstItem="Na3-e2-ZdJ" firstAttribute="leading" secondItem="paU-DM-GPt" secondAttribute="trailing" constant="5" id="Kig-KO-bVs"/>
                     <constraint firstItem="Zwc-vP-lh8" firstAttribute="leading" secondItem="JgB-k0-jZM" secondAttribute="trailing" constant="10" id="Krm-Ee-e1F"/>
+                    <constraint firstItem="paU-DM-GPt" firstAttribute="baseline" secondItem="AoF-Ed-Bhu" secondAttribute="baseline" id="MKG-zs-dXa"/>
+                    <constraint firstItem="paU-DM-GPt" firstAttribute="firstBaseline" secondItem="AoF-Ed-Bhu" secondAttribute="firstBaseline" id="PS4-qY-Gku"/>
                     <constraint firstItem="2vr-Dg-LWh" firstAttribute="leading" secondItem="gKo-7k-Rj9" secondAttribute="leading" id="Pjn-e6-6z7"/>
                     <constraint firstItem="2vr-Dg-LWh" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leading" id="Puu-F7-zNF"/>
                     <constraint firstItem="2vr-Dg-LWh" firstAttribute="top" secondItem="JgB-k0-jZM" secondAttribute="bottom" constant="8" symbolic="YES" id="Q26-h5-fiB"/>
+                    <constraint firstItem="AoF-Ed-Bhu" firstAttribute="baseline" secondItem="paU-DM-GPt" secondAttribute="baseline" id="Ryu-Zj-nph"/>
                     <constraint firstItem="AoF-Ed-Bhu" firstAttribute="baseline" secondItem="paU-DM-GPt" secondAttribute="baseline" id="SiP-Ga-fZr"/>
                     <constraint firstItem="JgB-k0-jZM" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leading" constant="20" id="XH3-hS-TFf"/>
+                    <constraint firstItem="AoF-Ed-Bhu" firstAttribute="top" secondItem="paU-DM-GPt" secondAttribute="top" id="aiU-Zb-bhC"/>
                     <constraint firstAttribute="bottomMargin" secondItem="gKo-7k-Rj9" secondAttribute="bottom" constant="-9" id="axG-SG-GHZ"/>
-                    <constraint firstItem="paU-DM-GPt" firstAttribute="top" secondItem="2vr-Dg-LWh" secondAttribute="bottom" constant="1" id="k52-oD-rB8"/>
+                    <constraint firstItem="AoF-Ed-Bhu" firstAttribute="baseline" secondItem="paU-DM-GPt" secondAttribute="baseline" id="hvE-dy-eY9"/>
                     <constraint firstItem="2vr-Dg-LWh" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leading" id="kE0-XF-oMN"/>
-                    <constraint firstItem="gKo-7k-Rj9" firstAttribute="top" secondItem="paU-DM-GPt" secondAttribute="bottom" constant="6" id="p6k-4d-dVy"/>
+                    <constraint firstItem="paU-DM-GPt" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leadingMargin" constant="15" id="kvE-u1-e4I"/>
+                    <constraint firstItem="gKo-7k-Rj9" firstAttribute="top" secondItem="AoF-Ed-Bhu" secondAttribute="bottom" constant="56" id="uNu-Pv-OuR"/>
                     <constraint firstItem="Zwc-vP-lh8" firstAttribute="top" secondItem="PyC-iL-GVb" secondAttribute="topMargin" constant="22" id="ujG-zY-8Po"/>
-                    <constraint firstItem="paU-DM-GPt" firstAttribute="top" secondItem="2vr-Dg-LWh" secondAttribute="bottom" constant="1" id="va6-Nc-uYl"/>
                     <constraint firstItem="JgB-k0-jZM" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leading" constant="20" id="vtW-HL-g2O"/>
+                    <constraint firstItem="AoF-Ed-Bhu" firstAttribute="firstBaseline" secondItem="paU-DM-GPt" secondAttribute="firstBaseline" id="wwh-zE-8iH"/>
+                    <constraint firstItem="Na3-e2-ZdJ" firstAttribute="top" secondItem="2vr-Dg-LWh" secondAttribute="bottom" constant="5" id="yIq-Mt-lTu"/>
                     <constraint firstAttribute="trailing" secondItem="2vr-Dg-LWh" secondAttribute="trailing" id="zcW-cD-u1t"/>
                     <constraint firstItem="JgB-k0-jZM" firstAttribute="leading" secondItem="PyC-iL-GVb" secondAttribute="leading" constant="20" id="zmr-Gf-JBJ"/>
                 </constraints>
@@ -114,6 +129,7 @@
                 <outlet property="UserName" destination="Zwc-vP-lh8" id="U3q-m8-o95"/>
                 <outlet property="comment" destination="gKo-7k-Rj9" id="12b-QL-ip8"/>
                 <outlet property="iineButton" destination="paU-DM-GPt" id="1cI-4w-8GI"/>
+                <outlet property="likeNumber" destination="Na3-e2-ZdJ" id="1Co-eC-Gu9"/>
             </connections>
             <point key="canvasLocation" x="-29" y="1"/>
         </tableViewCell>

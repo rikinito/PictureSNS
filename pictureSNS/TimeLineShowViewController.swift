@@ -14,6 +14,9 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
     var images : [UIImage] = [UIImage]()
     var texts : [String] = [String]()
     var Ids : [String] = [String]()
+    var comentsArray : [[String]] = [[String]]()
+    var likenumbers : [Int] = [Int]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,11 +64,23 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
                         
                         let id = obj.objectId
                         print(id)
-                        self.texts.append(id!)
+                        self.Ids.append(id!)
                         
                         
                         let text = obj.object(forKey: "Expression")
                         self.texts.append(text as! String)
+                        
+                        
+                        let coments = obj.object(forKey: "coments")
+                        
+                        self.comentsArray.append((coments as? [String])!)
+                        
+                        let likenumber = obj.object(forKey: "likeNumber")
+                        print(likenumber)
+
+                        self.likenumbers.append((likenumber as? Int)!)
+               
+
 
                         print(text)
                         
@@ -128,9 +143,11 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
             
             
             //cell.imageView?.frame = CGRect(x:0,y:0,width:table.frame.width-50,height:table.frame.width)
-            //cell.objctId = Ids[indexPath.row]
+            cell.objctId = Ids[indexPath.row]
             
             cell.comment.text = texts[indexPath.row]
+            cell.likeNumber.text = String(likenumbers[indexPath.row])
+            
             print(cell.frame)
             print(cell.imageView?.frame)
             print(cell.imageView?.image?.size)

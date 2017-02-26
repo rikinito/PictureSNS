@@ -60,7 +60,8 @@ class SendDataViewController: UIViewController{
         let obj = NCMBObject(className: "lifeistech")
         obj?.setObject(NCMBUser.current(), forKey: "UserName")
         obj?.setObject(fileName,forKey: "FileName")
-        obj?.setObject(0,forKey: "likeNunber")
+        obj?.setObject(0,forKey: "likeNumber")
+        obj?.setObject([], forKey: "coments")
         
         let text = sendTextView.text
         obj?.setObject(text,forKey: "Expression")
