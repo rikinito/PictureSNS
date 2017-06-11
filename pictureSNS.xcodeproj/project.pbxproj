@@ -74,7 +74,6 @@
 		48B4888D1E2B404B00BC464C /* アップロード.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B4888C1E2B404B00BC464C /* アップロード.png */; };
 		48B488911E2B462100BC464C /* アセット 13.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B488901E2B462100BC464C /* アセット 13.png */; };
 		48B6DC0C1DE17F7100D435BA /* SendDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B6DC0B1DE17F7100D435BA /* SendDataViewController.swift */; };
-		48C11E951E5045DD00292D5C /* 14328.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C11E941E5045DD00292D5C /* 14328.png */; };
 		48CE1E341D8E5DF500B236FA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE1E331D8E5DF500B236FA /* LoginViewController.swift */; };
 		48CE1E361D8E647100B236FA /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CE1E351D8E647100B236FA /* LogoutViewController.swift */; };
 		48EEEDE71E5004FB009D3BAA /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 48EEEDE61E5004FB009D3BAA /* facebook.png */; };
@@ -232,7 +231,6 @@
 		48B4888C1E2B404B00BC464C /* アップロード.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アップロード.png"; sourceTree = "<group>"; };
 		48B488901E2B462100BC464C /* アセット 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アセット 13.png"; sourceTree = "<group>"; };
 		48B6DC0B1DE17F7100D435BA /* SendDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendDataViewController.swift; sourceTree = "<group>"; };
-		48C11E941E5045DD00292D5C /* 14328.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 14328.png; sourceTree = "<group>"; };
 		48CE1E331D8E5DF500B236FA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = NCMB/LoginViewController.swift; sourceTree = "<group>"; };
 		48CE1E351D8E647100B236FA /* LogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogoutViewController.swift; path = NCMB/LogoutViewController.swift; sourceTree = "<group>"; };
 		48EEEDE61E5004FB009D3BAA /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
@@ -548,7 +546,6 @@
 		48B4887F1E2B25FF00BC464C /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				48C11E941E5045DD00292D5C /* 14328.png */,
 				48B488901E2B462100BC464C /* アセット 13.png */,
 				481D903B1E3DD1EA00D64C5F /* 130383_n.jpg */,
 				48B4888C1E2B404B00BC464C /* アップロード.png */,
@@ -681,7 +678,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				487CC2F11D1635A4005EED73 /* NCMB_Info.plist in Resources */,
-				48C11E951E5045DD00292D5C /* 14328.png in Resources */,
 				487CC2541D163562005EED73 /* LaunchScreen.storyboard in Resources */,
 				48B488831E2B269000BC464C /* LogIn.png in Resources */,
 				481D903C1E3DD1EA00D64C5F /* 130383_n.jpg in Resources */,

@@ -55,6 +55,9 @@ class TimeLineShowViewController: UIViewController, UITableViewDelegate, UITable
                 
                 self.images.removeAll()
                 self.texts.removeAll()
+                self.comentsArray.removeAll()
+                self.likenumbers.removeAll()
+                self.Ids.removeAll()
 
                 
                 for i in 0...(objects?.count)!-1 {

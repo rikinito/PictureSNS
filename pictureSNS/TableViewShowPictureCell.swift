@@ -19,7 +19,7 @@ class TableViewShowPictureCell: UITableViewCell {
     @IBOutlet weak var comment: UILabel!
     
     @IBOutlet weak var iineButton: UIButton!
-    
+ 
     @IBOutlet weak var likeNumber: UILabel!
   
     
@@ -32,7 +32,7 @@ class TableViewShowPictureCell: UITableViewCell {
         super.awakeFromNib()
         // Initalization code
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
