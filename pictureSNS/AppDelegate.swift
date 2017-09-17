@@ -11,12 +11,11 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var window: UIWindow?     
+    let applicationkey = "9e73bbcca92e3d7cf4eca492e702058665c5632453ce370cfb8587b65c8f6cca"
     
-    let applicationkey = "17917fc9b23cf54cd00418e56cba922581ca6088f01936efc15924cd086f0e97"
+    let clientkey      = "cf989e12c442073836e60e40e2e09b86308f501053506733db7163f4026909f7"
     
-    let clientkey      = "da4deacbb4982c042b23e1755406c177e7e29b62b06c00288c86e6b21e88dd48"
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

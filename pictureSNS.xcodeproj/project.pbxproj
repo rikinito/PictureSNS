@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		481D903C1E3DD1EA00D64C5F /* 130383_n.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 481D903B1E3DD1EA00D64C5F /* 130383_n.jpg */; };
-		483313EA1D28A04500CBEECA /* original.png in Resources */ = {isa = PBXBuildFile; fileRef = 483313E91D28A04500CBEECA /* original.png */; };
+		483313EA1D28A04500CBEECA /* Life is Tech.png in Resources */ = {isa = PBXBuildFile; fileRef = 483313E91D28A04500CBEECA /* Life is Tech.png */; };
+		48416ECD1F6E1CE100A88BDC /* SingUP.png in Resources */ = {isa = PBXBuildFile; fileRef = 48416ECC1F6E1CE100A88BDC /* SingUP.png */; };
+		48416ECF1F6E1F3700A88BDC /* comment.png in Resources */ = {isa = PBXBuildFile; fileRef = 48416ECE1F6E1F3700A88BDC /* comment.png */; };
+		48416ED11F6E203300A88BDC /* LogIn.png in Resources */ = {isa = PBXBuildFile; fileRef = 48416ED01F6E203300A88BDC /* LogIn.png */; };
 		487CC24A1D163562005EED73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487CC2491D163562005EED73 /* AppDelegate.swift */; };
 		487CC24F1D163562005EED73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 487CC24D1D163562005EED73 /* Main.storyboard */; };
 		487CC2511D163562005EED73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 487CC2501D163562005EED73 /* Assets.xcassets */; };
@@ -65,10 +68,7 @@
 		487CC31E1D1635A4005EED73 /* NCMBSetOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 487CC2E51D1635A4005EED73 /* NCMBSetOperation.m */; };
 		487CC31F1D1635A4005EED73 /* SubClassHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 487CC2EE1D1635A4005EED73 /* SubClassHandler.m */; };
 		487CC3211D166FB6005EED73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487CC24B1D163562005EED73 /* ViewController.swift */; };
-		487CC3251D168741005EED73 /* ai.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 487CC3241D168741005EED73 /* ai.jpeg */; };
 		48942B8F1D8E365500D71B0F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48942B8E1D8E365500D71B0F /* SignUpViewController.swift */; };
-		48B488811E2B261600BC464C /* SingUP.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B488801E2B261600BC464C /* SingUP.png */; };
-		48B488831E2B269000BC464C /* LogIn.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B488821E2B269000BC464C /* LogIn.png */; };
 		48B488851E2B3CF200BC464C /* 登録.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B488841E2B3CF200BC464C /* 登録.png */; };
 		48B4888B1E2B3FD700BC464C /* アセット 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B4888A1E2B3FD700BC464C /* アセット 9.png */; };
 		48B4888D1E2B404B00BC464C /* アップロード.png in Resources */ = {isa = PBXBuildFile; fileRef = 48B4888C1E2B404B00BC464C /* アップロード.png */; };
@@ -101,7 +101,10 @@
 
 /* Begin PBXFileReference section */
 		481D903B1E3DD1EA00D64C5F /* 130383_n.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 130383_n.jpg; sourceTree = "<group>"; };
-		483313E91D28A04500CBEECA /* original.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = original.png; sourceTree = "<group>"; };
+		483313E91D28A04500CBEECA /* Life is Tech.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Life is Tech.png"; sourceTree = "<group>"; };
+		48416ECC1F6E1CE100A88BDC /* SingUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SingUP.png; sourceTree = "<group>"; };
+		48416ECE1F6E1F3700A88BDC /* comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment.png; sourceTree = "<group>"; };
+		48416ED01F6E203300A88BDC /* LogIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogIn.png; sourceTree = "<group>"; };
 		487CC2461D163562005EED73 /* pictureSNS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pictureSNS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		487CC2491D163562005EED73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		487CC24B1D163562005EED73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -222,10 +225,7 @@
 		487CC2ED1D1635A4005EED73 /* SubClassHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubClassHandler.h; sourceTree = "<group>"; };
 		487CC2EE1D1635A4005EED73 /* SubClassHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubClassHandler.m; sourceTree = "<group>"; };
 		487CC3201D1635F0005EED73 /* pictureSNS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pictureSNS-Bridging-Header.h"; sourceTree = "<group>"; };
-		487CC3241D168741005EED73 /* ai.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ai.jpeg; sourceTree = "<group>"; };
 		48942B8E1D8E365500D71B0F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		48B488801E2B261600BC464C /* SingUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SingUP.png; sourceTree = "<group>"; };
-		48B488821E2B269000BC464C /* LogIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogIn.png; sourceTree = "<group>"; };
 		48B488841E2B3CF200BC464C /* 登録.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "登録.png"; sourceTree = "<group>"; };
 		48B4888A1E2B3FD700BC464C /* アセット 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アセット 9.png"; sourceTree = "<group>"; };
 		48B4888C1E2B404B00BC464C /* アップロード.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "アップロード.png"; sourceTree = "<group>"; };
@@ -289,8 +289,6 @@
 			children = (
 				48B4887F1E2B25FF00BC464C /* Image */,
 				48F197F51DCF0CE2001C07BE /* TableViewCell */,
-				487CC3241D168741005EED73 /* ai.jpeg */,
-				483313E91D28A04500CBEECA /* original.png */,
 				487CC2771D1635A4005EED73 /* NCMB */,
 				487CC2491D163562005EED73 /* AppDelegate.swift */,
 				487CC24B1D163562005EED73 /* ViewController.swift */,
@@ -546,14 +544,16 @@
 		48B4887F1E2B25FF00BC464C /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				48416ED01F6E203300A88BDC /* LogIn.png */,
+				48416ECE1F6E1F3700A88BDC /* comment.png */,
+				483313E91D28A04500CBEECA /* Life is Tech.png */,
 				48B488901E2B462100BC464C /* アセット 13.png */,
 				481D903B1E3DD1EA00D64C5F /* 130383_n.jpg */,
 				48B4888C1E2B404B00BC464C /* アップロード.png */,
 				48B4888A1E2B3FD700BC464C /* アセット 9.png */,
 				48B488841E2B3CF200BC464C /* 登録.png */,
-				48B488801E2B261600BC464C /* SingUP.png */,
-				48B488821E2B269000BC464C /* LogIn.png */,
 				48EEEDE61E5004FB009D3BAA /* facebook.png */,
+				48416ECC1F6E1CE100A88BDC /* SingUP.png */,
 			);
 			name = Image;
 			sourceTree = "<group>";
@@ -679,16 +679,16 @@
 			files = (
 				487CC2F11D1635A4005EED73 /* NCMB_Info.plist in Resources */,
 				487CC2541D163562005EED73 /* LaunchScreen.storyboard in Resources */,
-				48B488831E2B269000BC464C /* LogIn.png in Resources */,
 				481D903C1E3DD1EA00D64C5F /* 130383_n.jpg in Resources */,
+				48416ECF1F6E1F3700A88BDC /* comment.png in Resources */,
 				48B4888D1E2B404B00BC464C /* アップロード.png in Resources */,
+				48416ED11F6E203300A88BDC /* LogIn.png in Resources */,
 				48EEEDE71E5004FB009D3BAA /* facebook.png in Resources */,
 				48B488851E2B3CF200BC464C /* 登録.png in Resources */,
 				487CC2511D163562005EED73 /* Assets.xcassets in Resources */,
-				48B488811E2B261600BC464C /* SingUP.png in Resources */,
-				487CC3251D168741005EED73 /* ai.jpeg in Resources */,
 				48F197F91DCF0DE0001C07BE /* TableViewShowPictureCell.xib in Resources */,
-				483313EA1D28A04500CBEECA /* original.png in Resources */,
+				483313EA1D28A04500CBEECA /* Life is Tech.png in Resources */,
+				48416ECD1F6E1CE100A88BDC /* SingUP.png in Resources */,
 				48B488911E2B462100BC464C /* アセット 13.png in Resources */,
 				48B4888B1E2B3FD700BC464C /* アセット 9.png in Resources */,
 				487CC24F1D163562005EED73 /* Main.storyboard in Resources */,

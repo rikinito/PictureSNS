@@ -122,10 +122,7 @@ class LoginViewController: UIViewController {
             self.passwordTextField.resignFirstResponder()
         }
         
-        
     }
-    
-    
     
     func logout() {
         NCMBUser.logOut()
